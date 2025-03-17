@@ -9,8 +9,7 @@ model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-capt
 # raw_image = Image.open(requests.get(img_url, stream=True).raw).convert('RGB')
 raw_image = Image.open(r".\images\us-test.jpg")
 # Specify the question you want to ask about the image
-# question = "What is in the image?"
-question = "How many humans are there in the image ?"
+question = "What is in the image?"
 # Use the processor to prepare inputs for VQA (image + question)
 inputs = processor(raw_image, question, return_tensors="pt")
 # Generate the answer from the model
